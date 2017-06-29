@@ -1,7 +1,7 @@
 # react-native-onboarding
 <h1>Onboarding</h1>
 
-<p>If you want to try it out on your fone using Expo just type this link:</p>
+<p>If you want to try it out on your phone using Expo just type this link:</p>
 <p>exp://y7-cyp.jfsene.onboarding.exp.direct:80</p> 
 
 ___________________________________________________________________________________________________________
