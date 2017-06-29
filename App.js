@@ -5,7 +5,7 @@ import {
 } from "react-native";
 import Screens from "./Screens";
 
-export default class TestApp002 extends Component {
+export default class App extends Component {
   componentDidMount() {
     //Hide status bar
     StatusBar.setHidden(true);
@@ -15,4 +15,4 @@ export default class TestApp002 extends Component {
   }
 }
 
-AppRegistry.registerComponent("TestApp", () => TestApp);
+AppRegistry.registerComponent("App", () => App);
