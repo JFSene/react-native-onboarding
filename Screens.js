@@ -13,22 +13,24 @@ export default class Screens extends Component {
   return (
     <Swiper>
       {/* First screen */}
-      <View style={[styles.slide, { backgroundColor: '#999999' }]}>
+     <View style={[styles.slide, { backgroundColor: '#999999' }]}>
         <Icon name="logo-apple" {...iconStyles} />
         <Text style={styles.header}>iOS</Text>
-        <Text style={styles.textMac}>This can be an iOS App!</Text>
+        <Text style={styles.textMac}>This can be an iOS app!</Text>
       </View>
       {/* Second screen */}
       <View style={[styles.slide, { backgroundColor: '#0f9d58' }]}>
         <Icon name="logo-android" {...iconStyles} />
         <Text style={styles.header}>Android</Text>
-        <Text style={styles.text}>This is an Android App</Text>
+        <Text style={styles.text}>Or maybe an Android app.</Text>
       </View>
       {/* Third screen */}
       <View style={[styles.slide, { backgroundColor: '#2E8DEF' }]}>
         <Icon name="logo-windows" {...iconStyles} />
         <Text style={styles.header}>Windows</Text>
-        <Text style={styles.text}>Totaly written in a Windows 10 machine using Expo + Ract-Native</Text>
+        <Text style={styles.text}>But the most awesome fact is:</Text>
+        <Text style={styles.text}>It was built in Windows with</Text>
+        <Text style={styles.text}>React Native + Expo</Text>
       </View>
     </Swiper>
   );
