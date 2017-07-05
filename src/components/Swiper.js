@@ -7,19 +7,20 @@
 
 import React, { Component } from 'react';
 import {
-  Dimensions,       // Detects screen dimensions
-  Platform,         // Detects platform running the app
-  ScrollView,       // Handles navigation between screens
-  StyleSheet,       // CSS-like styles
-  View,             // Container component
+  Dimensions,       
+  Platform,        
+  ScrollView,       
+  StyleSheet,      
+  View,           
 } from 'react-native';
-import Button from './Button';
+import { StackNavigator } from 'react-navigation';
+import Button from '../components/Button';
+import Screens from "../screens/Screens";
 
-// Detect screen width and height
+// Detect width and height
 const { width, height } = Dimensions.get('window');
 
 export default class OnboardingScreens extends Component {
-
   // Props for ScrollView component
   static defaultProps = {
     // Arrange screens horizontally
@@ -146,6 +147,7 @@ export default class OnboardingScreens extends Component {
   /**
    * Swipe one slide forward
    */
+
   swipe = () => {
     // Ignore if already scrolling or if there is less than 2 slides
     if (this.internals.isScrolling || this.state.total < 2) {
@@ -213,9 +215,7 @@ export default class OnboardingScreens extends Component {
 
     for (let key = 0; key < this.state.total; key++) {
       dots.push(key === this.state.index
-        // Active dot
         ? React.cloneElement(ActiveDot, { key })
-        // Other dots
         : React.cloneElement(Dot, { key })
       );
     }
@@ -231,7 +231,7 @@ export default class OnboardingScreens extends Component {
   }
 
   /**
-   * Render Continue or Done button
+   * Render Continu/Done button
    */
   renderButton = () => {
     const lastScreen = this.state.index === this.state.total - 1;
@@ -240,25 +240,21 @@ export default class OnboardingScreens extends Component {
         {lastScreen
           // Show this button on the last screen
           // TODO: Add a handler that would send a user to your app after onboarding is complete
-          ? <Button text="Start Now" onPress={() => console.log('Send me to the app')} />
-          // Or this one otherwise
-          : <Button text="Continue" onPress={() => this.swipe()} />
+          ? <Button text="Fim" onPress={() => console.log("Created by Joel Sene")} />
+          : <Button text="Próxima" onPress={() => this.swipe()} />
         }
       </View>
     );
   }
 
   /**
-   * Render the component
+   * Render component
    */
   render = ({ children } = this.props) => {
     return (
       <View style={[styles.container, styles.fullScreen]}>
-        {/* Render screens */}
         {this.renderScrollView(children)}
-        {/* Render pagination */}
         {this.renderPagination()}
-        {/* Render Continue or Done button */}
         {this.renderButton()}
       </View>
     );
@@ -266,24 +262,20 @@ export default class OnboardingScreens extends Component {
 }
 
 const styles = StyleSheet.create({
-  // Set width and height to the screen size
   fullScreen: {
     width: width,
     height: height
   },
-  // Main container
   container: {
     backgroundColor: 'transparent',
     position: 'relative'
   },
-  // Slide
   slide: {
     backgroundColor: 'transparent'
   },
-  // Pagination indicators
   pagination: {
     position: 'absolute',
-    bottom: 110,
+    bottom: 120,
     left: 0,
     right: 0,
     flex: 1,
@@ -292,7 +284,6 @@ const styles = StyleSheet.create({
     alignItems: 'flex-end',
     backgroundColor: 'transparent'
   },
-  // Pagination dot
   dot: {
     backgroundColor: 'rgba(0,0,0,.25)',
     width: 8,
@@ -303,16 +294,14 @@ const styles = StyleSheet.create({
     marginTop: 3,
     marginBottom: 3
   },
-  // Active dot
   activeDot: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#999999',
   },
-  // Button wrapper
   buttonWrapper: {
     backgroundColor: 'transparent',
     flexDirection: 'column',
     position: 'absolute',
-    bottom: 0,
+    bottom: -10,
     left: 0,
     flex: 1,
     paddingHorizontal: 10,

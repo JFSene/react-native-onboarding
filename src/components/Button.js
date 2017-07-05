@@ -1,14 +1,13 @@
 /**
  * Button component
- * Renders a button and calls a function passed via onPress prop once tapped
  */
 
 import React, { Component } from 'react';
 import {
-  StyleSheet,       // CSS-like styles
-  Text,             // Renders text
-  TouchableOpacity, // Pressable container
-  View              // Container component
+  StyleSheet,      
+  Text,            
+  TouchableOpacity, 
+  View              
 } from 'react-native';
 
 export default class Button extends Component {
@@ -26,15 +25,15 @@ export default class Button extends Component {
 const styles = StyleSheet.create({
   // Button container
   button: {
-    borderRadius: 50,         // Rounded border
-    borderWidth: 2,           // 2 point border widht
-    borderColor: '#FFFFFF',   // White colored border
-    paddingHorizontal: 50,    // Horizontal padding
-    paddingVertical: 10,      // Vertical padding
+    borderRadius: 50,         
+    borderWidth: 2,          
+    borderColor: '#FFF',   
+    paddingHorizontal: 100,    
+    paddingVertical: 20,      
   },
   // Button text
   text: {
-    color: '#FFFFFF',
+    color: '#FFF',
     fontWeight: 'bold',
     fontFamily: 'Avenir',
   },
