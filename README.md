@@ -1,23 +1,28 @@
 # react-native-onboarding
 <h1>Onboarding</h1>
-
-<p>If you want to try it out on your phone using Expo just type this link:</p>
-
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<p>Se quiser testar o app, utitlize o Expo e o link abaixo para abrir o App em seu celular.</p>
 https://exp.host/@jfsene/onboarding
 ___________________________________________________________________________________________________________
 <br><br>
 <br><br>
-
-<h2>Help me get better</h2>
-
-<p>If you have any tips on how to refactor my code, organize it in a better way, don't be shy...</p>
-<p>Just open a new Issue and leave your comment</p>
-
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<h3>Objetivo</h3>
+<p>Como o tema para o teste era livre, resolvi criar um Onboarding,m aquela tela inicial com 3 paginas explicando o objetivo do aplicativo para o usuario.</p>
 ___________________________________________________________________________________________________________
 <br><br>
 <br><br>
 
 
-<h3>JFSene</h3>
+<h6>JFSene</h6>
+<p>joel.sene@hotmail.com</p>
 v.0.0.1
 
